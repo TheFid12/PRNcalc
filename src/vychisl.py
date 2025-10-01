@@ -17,12 +17,13 @@ def schet(pop1, pop2, op):
                         res=int(pop2)//int(pop1)
                     except ValueError:
                          print("Операции // и % только для целых чисел")
-                         SystemExit
+                         exit(1)
                 case '%':
                     try:
                         res=int(pop2)%int(pop1)
                     except ValueError:
                          print("Операции // и % только для целых чисел")  
+                         exit(1)                
                 case _:
                     raise SyntaxError("Unknown operation")
     return res
