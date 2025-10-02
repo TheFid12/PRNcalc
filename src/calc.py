@@ -4,7 +4,6 @@ from src.replacer import replaceunar
 from src.vychisl import schet
 from src.skobki_check import check_skobki
 from src.prnv import check_rpn
-import pytest
 
 def calc(expr):
     """Проводит все необходимые проверки и окончательный вывод результата.
