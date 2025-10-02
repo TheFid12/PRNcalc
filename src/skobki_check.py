@@ -23,7 +23,7 @@ bool: True, если скобки корректны, иначе False.
             start = stack.pop()
             if not check_skobki(tokens[start+1:i]):
                 return False
-            if not check_rpn([t for t in tokens[start+1:i] 
+            if not check_rpn([t for t in tokens[start+1:i]
                               if t not in {'(', ')'}],0):
                 return False
         i += 1

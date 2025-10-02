@@ -1,9 +1,8 @@
 from src.Tokenezator import Tokenxix
-from src.isdigit import isnumber
 from src.replacer import replaceunar
-from src.vychisl import schet
 from src.skobki_check import check_skobki
 from src.prnv import check_rpn
+
 
 def calc(expr):
     """Проводит все необходимые проверки и окончательный вывод результата.
@@ -26,8 +25,4 @@ expr (str): Строка с выражением.
         tokens=tokens[1:]
     stack=replaceunar(stack)
     if check_skobki(stack) and check_rpn(stack, 0):
-        print(check_rpn(stack, 1)) 
-
-
-
-
+        print(check_rpn(stack, 1))

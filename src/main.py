@@ -1,4 +1,4 @@
-import string, sys
+import  sys
 from src.calc import calc
 
 
@@ -12,7 +12,7 @@ def main() -> None:
         calc(line.rstrip())
 
 
-    
+
 
 if __name__ == "__main__":
     main()

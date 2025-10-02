@@ -39,8 +39,8 @@ float | int: Результат операции.
                     try:
                         res=int(pop2)%int(pop1)
                     except ValueError:
-                         print("Операции // и % только для целых чисел")  
-                         exit(1)                
+                         print("Операции // и % только для целых чисел")
+                         exit(1)
                 case _:
                     raise SyntaxError("Неизвестная операция")
     return res
