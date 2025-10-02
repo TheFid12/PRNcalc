@@ -1,7 +1,17 @@
-from prnv import check_rpn
+from src.prnv import check_rpn
 
 
 def check_skobki(tokens):
+    """Проверяет корректность расстановки скобок в выражении.
+
+
+Args:
+tokens (list): Список токенов выражения.
+
+
+Returns:
+bool: True, если скобки корректны, иначе False.
+"""
     i = 0
     stack = []
     while i < len(tokens):

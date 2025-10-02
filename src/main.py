@@ -1,8 +1,13 @@
 import string, sys
-from calc import calc
+from src.calc import calc
 
 
 def main() -> None:
+    """Главная функция программы.
+
+
+Читает ввод построчно из stdin и передает его в функцию calc.
+"""
     for line in sys.stdin:
         calc(line.rstrip())
 

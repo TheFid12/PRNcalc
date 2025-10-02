@@ -1,11 +1,22 @@
-from isdigit import isNumber
-from vychisl import schet
+from src.isdigit import isnumber
+from src.vychisl import schet
 
 
 def check_rpn(tokens, flag):
+    """Проверяет и/или вычисляет выражение в обратной польской нотации.
+
+
+Args:
+tokens (list): Список токенов выражения.
+flag (int): 0 — проверка корректности, 1 — вычисление.
+
+
+Returns:
+bool | float: True/False при проверке, либо результат вычисления.
+"""
     stacko = []
     for t in tokens:
-        if isNumber(t):
+        if isnumber(t):
             stacko.append(t)
         elif t in {'+', '-', '*', '/', '%', '**', "//"}:
             if len(stacko) < 2:

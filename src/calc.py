@@ -1,11 +1,25 @@
-from Tokenezator import Tokenxix
-from isdigit import isNumber
-from replacer import replaceunar
-from vychisl import schet
-from skobki_check import check_skobki
-from prnv import check_rpn
+from src.Tokenezator import Tokenxix
+from src.isdigit import isnumber
+from src.replacer import replaceunar
+from src.vychisl import schet
+from src.skobki_check import check_skobki
+from src.prnv import check_rpn
+import pytest
 
 def calc(expr):
+    """Проводит все необходимые проверки и окончательный вывод результата.
+
+
+Args:
+expr (str): Строка с выражением.
+
+
+Обрабатывает пустой ввод, проверяет скобки и корректность записи.
+При корректном выражении выводит результат вычисления.
+"""
+    if not expr:
+        print("Ошибка, Введена пустая строка")
+        return 0
     stack=[]
     tokens=Tokenxix(expr)
     while tok := tokens:

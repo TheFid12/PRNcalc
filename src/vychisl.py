@@ -1,6 +1,16 @@
-
-
 def schet(pop1, pop2, op):
+    """Выполняет арифметическую операцию над двумя числами.
+
+
+Args:
+pop1 (str): Первый операнд (строкой).
+pop2 (str): Второй операнд (строкой).
+op (str): Оператор (+, -, *, /, //, %, **).
+
+
+Returns:
+float | int: Результат операции.
+"""
     match op:
                 case '+':
                     res = float(pop1) + float(pop2)
@@ -9,7 +19,11 @@ def schet(pop1, pop2, op):
                 case '*':
                     res = float(pop1) * float(pop2)
                 case '/':
-                    res = float(pop2) / float(pop1)
+                    try:
+                         res = float(pop2) / float(pop1)
+                    except ZeroDivisionError:
+                         print("Деление на 0 невозможно")
+                         exit(1)
                 case '**':
                     res= float(pop2)**float(pop1)
                 case '//':
@@ -18,6 +32,9 @@ def schet(pop1, pop2, op):
                     except ValueError:
                          print("Операции // и % только для целых чисел")
                          exit(1)
+                    except ZeroDivisionError:
+                         print("Деление на 0 невозможно")
+                         exit(1)
                 case '%':
                     try:
                         res=int(pop2)%int(pop1)
@@ -25,5 +42,5 @@ def schet(pop1, pop2, op):
                          print("Операции // и % только для целых чисел")  
                          exit(1)                
                 case _:
-                    raise SyntaxError("Unknown operation")
+                    raise SyntaxError("Неизвестная операция")
     return res
