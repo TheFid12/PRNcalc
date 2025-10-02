@@ -13,6 +13,8 @@ def check_rpn(tokens, flag):
             x1=stacko.pop()
             x2=stacko.pop()
             stacko.append(schet(x1,x2,t))
+        elif t=='(' or ')':
+            continue
         else:
             return False
     if flag==0:
