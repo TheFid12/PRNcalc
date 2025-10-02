@@ -1,4 +1,6 @@
-import re 
+import re
+
+
 def isnumber(tok):
     """Проверяет, является ли токен числом.
 
