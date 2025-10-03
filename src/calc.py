@@ -26,3 +26,5 @@ expr (str): Строка с выражением.
     stack=replaceunar(stack)
     if check_skobki(stack) and check_rpn(stack, 0):
         print(check_rpn(stack, 1))
+    elif not check_rpn(stack, 0):
+        print("Введеное выражение не является польской записью")

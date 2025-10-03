@@ -9,6 +9,9 @@ def main() -> None:
 Читает ввод построчно из stdin и передает его в функцию calc.
 """
     for line in sys.stdin:
+        if line.strip().lower() == "exit":
+            print("Выход из программы.")
+            break
         calc(line.rstrip())
 
 
