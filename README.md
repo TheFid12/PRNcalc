@@ -51,7 +51,7 @@
    git clone https://github.com/TheFid12/PRNcalc.git
 
 2. Запустить калькулятор:
-   python src/main.py
+   python -m src.main
 
 3. Запустить тесты:
     py -m pytest .\tests\__init__.py
