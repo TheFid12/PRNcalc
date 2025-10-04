@@ -55,7 +55,7 @@
    python -m src.main
 
 3. Запустить тесты:
-    py -m pytest .\tests\__init__.py
+    py -m pytest .\tests\tests.py
 ## Автоматизация и проверка стиля
 
 В проекте используется:
